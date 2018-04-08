@@ -1,0 +1,40 @@
+@charset "utf-8";
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei", serif;
+}
+
+ul,
+li,
+p {
+    margin: 0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+
+@mixin inline() {
+    float: left;
+}
+
+@mixin countImg($img) {
+    width: width($img+".png");
+    height: height($img+".png");
+}
+
+@mixin radius($r) {
+    border-radius: $r + px;
+    -moz-border-radius: $r + px;
+    -webkit-border-radius: $r + px;
+}
+
+@mixin btn($img) {
+    width: width($img+".png");
+    height: height($img+".png");
+    background: url("../images/"+$img+".png#sprbtn") no-repeat;
+
+}
+
